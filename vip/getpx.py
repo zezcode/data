@@ -1,8 +1,11 @@
 import os
 import requests
+
 def proxy():
     urls = [
     "https://openproxylist.xyz/http.txt",    
+    "http://alexa.lr2b.com/proxylist.txt",
+    "https://multiproxy.org/txt_all/proxy.txt",      
     "https://api.proxyscrape.com/?request=getproxies&proxytype=https&timeout=1000&country=all&ssl=all&anonymity=all",
     "https://api.proxyscrape.com/v2/?request=getproxies&protocol=https&timeout=10000&country=all&ssl=all&anonymity=all&simplified=true",
     "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all",
@@ -40,5 +43,5 @@ def proxy():
     proxy_count = len(non_empty_lines)
     print("Proxy được làm mới thành công!")
     print("Số lượng proxy:", proxy_count)  
-    input("Nhấn Enter Để Đóng")
-proxy()    
+    input("Gõ Enter để thoát...")
+proxy()
